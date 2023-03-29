@@ -1,0 +1,94 @@
+:root {
+  --default-font-size: 1rem;
+  --color-green: green;
+  --color-blue: blue;
+  --color-red: red;
+  --color-transparent: transparent;
+  --border-color-green: green;
+  --border-color-darkred: darkred;
+}
+
+h1, h2 {
+  font-size: 16pxrem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+h2 {
+  padding: 16pxrem;
+  border: 16pxrem solid red;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid var(--border-color-darkred);
+  background-color: white;
+}
+
+.main-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.title, .subtitle {
+  padding: 1rem;
+  border: 1px solid var(--color-red);
+}
+
+.title, .subtitle {
+  text-decoration: underline blue;
+  color: var(--color-green);
+  border: 1px solid var(--border-color-transparent);
+  font-size: calc(20, 16px);
+}
+
+.title1 {
+  border: 1px solid var(--color-red);
+  color: var(--color-green);
+  border: 1px solid var(--border-color-transparent);
+  font-size: calc(20, 16px);
+}
+
+.sub-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.sub-boxes .sub-box {
+  width: 23%;
+  padding: 20px;
+  color: var(--color-blue);
+  border: 1px solid var(--border-color-green);
+  font-size: calc(20, 16px);
+}
+.sub-boxes .sub-box-b, .sub-boxes .sub-box-d {
+  color: var(--color-red);
+  border: 1px solid var(--border-color-green);
+  font-size: calc(20, 16px);
+}
+.sub-boxes .sub-box-a, .sub-boxes .sub-box-c {
+  color: var(--color-blue);
+  border: 1px solid var(--border-color-green);
+  font-size: calc(20, 16px);
+}
+
+.title1 {
+  border: 1px solid var(--color-red);
+  width: 20%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-left: 40%;
+}
+
+.bottom-box {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid var(--color-blue);
+  background-color: white;
+  color: var(--color-green);
+  font-size: 24px;
+  font-size: calc(24, 16px);
+}
+
+/*# sourceMappingURL=selectors_extend.css.map */

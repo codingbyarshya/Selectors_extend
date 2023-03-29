@@ -1,0 +1,101 @@
+:root {
+    --default-font-size: 1rem;
+    --color-green: green;
+    --color-blue: blue;
+    --color-red: red;
+    --color-transparent: transparent;
+    --border-color-green: green;
+    --border-color-darkred: darkred;
+    }
+    $primary-color: #007bff;
+    $secondary-color: #6c757d;
+    $font-size: 16px;
+
+    @function to-rem($value) {
+        @return #{$font-size}rem;
+      }
+
+h1, h2 {
+  font-size: to-rem(24px);
+  font-weight: bold;
+  color: $primary-color;
+}
+
+h2 {
+  @extend h1;
+  padding: to-rem(16px);
+  border: to-rem(1px) solid red;
+}
+
+    @mixin rem($value) {
+    font-size: calc(#{$value}, 16px);
+    }
+    
+    @mixin article-style($color, $border-color, $font-size: 20) {
+    color: var(--color-#{$color});
+    border: 1px solid var(--border-color-#{$border-color});
+    @include rem($font-size);
+    }
+    
+    .container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid var(--border-color-darkred);
+    background-color: white;
+    }
+    
+    .main-box {
+    padding: 20px;
+    text-align: center;
+    }
+    
+    .title, .subtitle {
+    @extend .title;
+    padding: 1rem;
+    border: 1px solid var(--color-red);
+    }
+    
+    .title {
+    text-decoration: underline blue;
+    @include article-style(green, transparent);
+    }
+    .title1 {
+        border: 1px solid var(--color-red);
+        @include article-style(green, transparent);
+        }
+    
+    .sub-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    
+    .sub-box {
+    width: 23%;
+    padding: 20px;
+    @include article-style(blue, green);
+    }
+    
+    .sub-box-b, .sub-box-d {
+    @include article-style(red, green);
+    }
+    
+    .sub-box-a, .sub-box-c {
+    @include article-style(blue, green);
+    }
+    }
+    .title1 {
+        border: 1px solid var(--color-red);
+        width: 20%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-left: 40%;
+    }
+    .bottom-box {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--color-blue);
+    background-color: white;
+    color: var(--color-green);
+    font-size: 24px;
+    @include rem(24);
+    }
